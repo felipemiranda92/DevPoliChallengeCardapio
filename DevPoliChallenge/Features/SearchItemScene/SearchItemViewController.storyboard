@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Item View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchItemViewController" id="Y6W-OH-hqX" customClass="SearchItemViewController" customModule="DevPoliChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3Dl-MO-lDg">
+                                <rect key="frame" x="5" y="79" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="eUQ-98-eTS"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dk6-xV-4AO">
+                                <rect key="frame" x="0.0" y="175" width="393" height="643"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Dl-MO-lDg" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="5" id="4CS-A9-ARg"/>
+                            <constraint firstItem="3Dl-MO-lDg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="6a7-Ot-q2k"/>
+                            <constraint firstItem="dk6-xV-4AO" firstAttribute="top" secondItem="3Dl-MO-lDg" secondAttribute="bottom" constant="40" id="72i-MS-6Er"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dk6-xV-4AO" secondAttribute="trailing" id="8bc-Rf-8aD"/>
+                            <constraint firstItem="3Dl-MO-lDg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="9hn-6a-H3B"/>
+                            <constraint firstAttribute="trailing" secondItem="3Dl-MO-lDg" secondAttribute="trailing" constant="-5" id="IlI-yR-EqP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dk6-xV-4AO" secondAttribute="bottom" id="bqF-88-D7o"/>
+                            <constraint firstItem="dk6-xV-4AO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sW7-LQ-6Gi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="3Dl-MO-lDg" id="TR4-rG-AGA"/>
+                        <outlet property="tableView" destination="dk6-xV-4AO" id="box-C3-llF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
