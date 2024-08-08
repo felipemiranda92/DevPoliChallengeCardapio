@@ -11,8 +11,7 @@ import UIKit
 class CategoryMenuCollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var categoryButton: UIButton!
-    
+    @IBOutlet weak var categoryLabel: UILabel!
     
     static let identifier: String = String(describing: CategoryMenuCollectionViewCell.self)
     
@@ -26,23 +25,16 @@ class CategoryMenuCollectionViewCell: UICollectionViewCell {
     }
     
     func configElements() {
-        categoryButton.layer.cornerRadius = 8
-        categoryButton.layer.borderWidth = 1
-        categoryButton.layer.borderColor = UIColor.systemBlue.cgColor
-        categoryButton.setTitleColor(.systemBlue, for: .normal)
-        categoryButton.backgroundColor = .clear
-        categoryButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
+        categoryLabel.layer.cornerRadius = 8
+        categoryLabel.layer.borderWidth = 1
+        categoryLabel.layer.borderColor = UIColor.systemBlue.cgColor
+        categoryLabel.textColor = UIColor.systemBlue
+        categoryLabel.textAlignment = .center
+        categoryLabel.clipsToBounds = true
     }
-    
-//    func setupCell(data: Produto) {
-//        categoryButton.setTitle(data.category?.title, for: .normal)
-//    }
-    
+        
     func setupCell(data: Category) {
-        categoryButton.setTitle(data.title, for: .normal)
-    }
-    
-    @IBAction func tappedCategoryButton(_ sender: UIButton) {
+        categoryLabel.text = data.title
     }
     
 }

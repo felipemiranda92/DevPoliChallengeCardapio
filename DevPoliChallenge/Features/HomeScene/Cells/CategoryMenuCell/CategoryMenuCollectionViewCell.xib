@@ -11,34 +11,30 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryMenuCollectionViewCell" customModule="DevPoliChallenge" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="277" height="73"/>
+            <rect key="frame" x="0.0" y="0.0" width="246" height="81"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="277" height="73"/>
+                <rect key="frame" x="0.0" y="0.0" width="246" height="81"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="My4-PK-Ynh">
-                        <rect key="frame" x="101" y="30" width="75" height="13"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                        <connections>
-                            <action selector="tappedCategoryButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="cDr-6X-PXa"/>
-                        </connections>
-                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJ8-N3-8No">
+                        <rect key="frame" x="102.33333333333333" y="30" width="41.333333333333329" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="My4-PK-Ynh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="30" id="482-RH-Iaw"/>
-                <constraint firstItem="My4-PK-Ynh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Xbi-yV-qOH"/>
-                <constraint firstAttribute="bottom" secondItem="My4-PK-Ynh" secondAttribute="bottom" constant="30" id="gH8-OB-d1g"/>
-                <constraint firstItem="My4-PK-Ynh" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="pdI-Ma-zey"/>
+                <constraint firstItem="VJ8-N3-8No" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="7MP-a4-qPs"/>
+                <constraint firstItem="VJ8-N3-8No" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="fuo-f9-WAH"/>
             </constraints>
-            <size key="customSize" width="277" height="73"/>
+            <size key="customSize" width="246" height="81"/>
             <connections>
-                <outlet property="categoryButton" destination="My4-PK-Ynh" id="otl-Y6-YJq"/>
+                <outlet property="categoryLabel" destination="VJ8-N3-8No" id="cxZ-AF-nCZ"/>
             </connections>
-            <point key="canvasLocation" x="190.07633587786259" y="43.309859154929576"/>
+            <point key="canvasLocation" x="166.41221374045801" y="45.422535211267608"/>
         </collectionViewCell>
     </objects>
 </document>

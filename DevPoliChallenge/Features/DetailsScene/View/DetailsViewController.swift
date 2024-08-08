@@ -59,8 +59,8 @@ class DetailsViewController: UIViewController {
             categoryProductLabel.adjustsFontSizeToFitWidth = true
             categoryProductLabel.minimumScaleFactor = 0.5
             
-            descriptionProductLabel.numberOfLines = 1
-            descriptionProductLabel.lineBreakMode = .byClipping
+            descriptionProductLabel.numberOfLines = 0
+            descriptionProductLabel.lineBreakMode = .byWordWrapping
             descriptionProductLabel.adjustsFontSizeToFitWidth = true
             descriptionProductLabel.minimumScaleFactor = 0.5
             

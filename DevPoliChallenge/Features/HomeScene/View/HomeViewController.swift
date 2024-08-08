@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .red
+        //        view.backgroundColor = .red
         configCollectionView()
         configTableView()
         viewModel.fetchMenu {
@@ -39,18 +39,17 @@ class HomeViewController: UIViewController {
         collectionView.dataSource = self
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.estimatedItemSize = CGSize(width: 100, height: 50)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
         collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.register(CategoryMenuCollectionViewCell.nib(), forCellWithReuseIdentifier: CategoryMenuCollectionViewCell.identifier)
     }
-
+    
     func configSearchBar() {
         searchBar.delegate = self
     }
-
-
+    
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -74,7 +73,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-
+    
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel.getCategories(section: section)
@@ -112,15 +111,20 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 50)
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width / CGFloat(viewModel.numberOfRows())
+        return CGSize(width: width, height: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let section = indexPath.row
-        let indexPath = IndexPath(row: NSNotFound, section: section)
-        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        let indexPath = IndexPath(row: 0, section: section)
+        if tableView.numberOfSections > section && tableView.numberOfRows(inSection: section) > 0 {
+            tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
     }
+    
 }
 
 
@@ -131,11 +135,11 @@ extension HomeViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let SearchItemScreen = UIStoryboard(name: String(describing: SearchItemViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: SearchItemViewController.self)) as? SearchItemViewController
-//        SearchItemScreen?.navigationItem.hidesBackButton = true
+        //        SearchItemScreen?.navigationItem.hidesBackButton = true
         navigationController?.pushViewController(SearchItemScreen ?? UIViewController(), animated: true)
     }
     
     //uitapgesture
-
+    
 }
 

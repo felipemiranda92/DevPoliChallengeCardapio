@@ -26,7 +26,8 @@ class SugestionItemCollectionViewCell: UICollectionViewCell {
     }
     
     func configElements() {
-        
+//        descriptionItemLabel.numberOfLines = 0
+//        descriptionItemLabel.lineBreakMode = .byWordWrapping
     }
     
     func setupCell(data: Produto) {
