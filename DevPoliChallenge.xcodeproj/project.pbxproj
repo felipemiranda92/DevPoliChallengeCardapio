@@ -169,6 +169,22 @@
 			path = HomeScene;
 			sourceTree = "<group>";
 		};
+		6486CECA2C653B1F00155548 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64C335412C615B19003CA0EC /* SearchItemViewController.swift */,
+				64C335432C615B24003CA0EC /* SearchItemViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6486CECB2C653B4300155548 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		648C33042C5D57AD00969461 /* DetailsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,8 +267,8 @@
 			isa = PBXGroup;
 			children = (
 				643B810D2C62A0DC00FBD4F9 /* Cell */,
-				64C335412C615B19003CA0EC /* SearchItemViewController.swift */,
-				64C335432C615B24003CA0EC /* SearchItemViewController.storyboard */,
+				6486CECA2C653B1F00155548 /* View */,
+				6486CECB2C653B4300155548 /* ViewModel */,
 			);
 			path = SearchItemScene;
 			sourceTree = "<group>";

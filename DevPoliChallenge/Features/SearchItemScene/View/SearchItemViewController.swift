@@ -42,5 +42,4 @@ extension SearchItemViewController: UITableViewDelegate, UITableViewDataSource {
 //        <#code#>
 //    }
     
-    
 }

@@ -138,7 +138,7 @@ extension DetailsViewController: UICollectionViewDelegate, UICollectionViewDataS
         let detailsScreen = UIStoryboard(name: String(describing: DetailsViewController.self), bundle: nil).instantiateViewController(identifier: String(describing: DetailsViewController.self)) { coder -> DetailsViewController? in
             return DetailsViewController(coder: coder, itemMenu: selectedProduct)
         }
-        
+        detailsScreen.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(detailsScreen, animated: true)
     }
 

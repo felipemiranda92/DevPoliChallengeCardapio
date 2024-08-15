@@ -74,17 +74,6 @@ class HomeViewModel {
         return uniqueCategories.count
     }
     
-//    func getItemMenu(indexPath: IndexPath) -> Produto? {
-//        guard let produtos = menu?.produtos else {
-//            return nil
-//        }
-//        return produtos[indexPath.row]
-//    }
-    
-//    func getItemMenu(indexPath: IndexPath) -> Category? {
-//        return uniqueCategories[indexPath.row]
-//    }
-//    
     func getItemMenu(indexPath: IndexPath) -> Category? {
         if indexPath.row < uniqueCategories.count {
             return uniqueCategories[indexPath.row]

@@ -88,7 +88,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let detailsScreen = UIStoryboard(name: String(describing: DetailsViewController.self), bundle: nil).instantiateViewController(identifier: String(describing: DetailsViewController.self)) { coder -> DetailsViewController? in
             return DetailsViewController(coder: coder, itemMenu: produto)
         }
-        
+        detailsScreen.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(detailsScreen, animated: true)
     }
     
@@ -136,7 +136,7 @@ extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let SearchItemScreen = UIStoryboard(name: String(describing: SearchItemViewController.self), bundle: nil).instantiateViewController(withIdentifier: String(describing: SearchItemViewController.self)) as? SearchItemViewController
         //        SearchItemScreen?.navigationItem.hidesBackButton = true
-        navigationController?.pushViewController(SearchItemScreen ?? UIViewController(), animated: true)
+        navigationController?.pushViewController(SearchItemScreen ?? UIViewController(), animated: false)
     }
     
     //uitapgesture
